@@ -69,17 +69,17 @@
         }
         #splash.hide { opacity: 0; visibility: hidden; pointer-events: none; }
         .splash-logo {
-            display: flex; align-items: center; gap: 14px;
-            margin-bottom: 40px;
+            display: flex; align-items: center; gap: 18px;
+            margin-bottom: 48px;
             opacity: 0;
             animation: splashUp 0.7s ease 0.2s forwards;
         }
         .splash-box {
-            width: 64px; height: 64px;
+            width: 84px; height: 84px;
             border: 1.5px solid rgba(45,212,191,0.4);
-            border-radius: 14px;
+            border-radius: 18px;
             display: flex; align-items: center; justify-content: center;
-            font-size: 22px; font-weight: 800;
+            font-size: 28px; font-weight: 800;
             color: #2dd4bf; font-family: monospace;
             animation: borderPulse 2s ease 1s infinite;
         }
@@ -88,7 +88,7 @@
             50% { border-color: rgba(45,212,191,0.9); }
         }
         .splash-bar-wrap {
-            width: 260px;
+            width: 340px;
             opacity: 0;
             animation: splashUp 0.7s ease 0.5s forwards;
         }
@@ -105,12 +105,12 @@
         <div class="splash-logo">
             <div class="splash-box">AS</div>
             <div style="line-height:1.3">
-                <div style="font-size:18px;color:#f1f5f9;font-weight:700;letter-spacing:2px;font-family:monospace;text-transform:uppercase;">Abdallah Saed</div>
-                <div style="font-size:10px;color:#64748b;letter-spacing:3px;font-family:monospace;text-transform:uppercase;margin-top:3px;">Gen AI · Data Science</div>
+                <div style="font-size:24px;color:#f1f5f9;font-weight:700;letter-spacing:2px;font-family:monospace;text-transform:uppercase;">Abdallah Saed</div>
+                <div style="font-size:13px;color:#64748b;letter-spacing:3px;font-family:monospace;text-transform:uppercase;margin-top:5px;">Gen AI · Data Science</div>
             </div>
         </div>
         <div class="splash-bar-wrap">
-            <div style="display:flex;justify-content:space-between;font-size:10px;color:#475569;letter-spacing:2px;font-family:monospace;text-transform:uppercase;margin-bottom:10px;">
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:#475569;letter-spacing:2px;font-family:monospace;text-transform:uppercase;margin-bottom:12px;">
                 <span id="splash-label">Initializing</span>
                 <span id="splash-pct">0%</span>
             </div>
@@ -502,7 +502,7 @@
                     setTimeout(() => {
                         splash.classList.add('hide');
                         startTypingEffect();
-                    }, 400);
+                    }, 250);
                     return;
                 }
                 const s = steps[i];
@@ -514,10 +514,10 @@
                     d++;
                     bar.style.width = (prev + d) + '%';
                     pct.textContent = (prev + d) + '%';
-                    if (d >= diff) { clearInterval(iv); setTimeout(() => run(i + 1), 220); }
-                }, 18);
+                    if (d >= diff) { clearInterval(iv); setTimeout(() => run(i + 1), 110); }
+                }, 9);
             }
-            setTimeout(() => run(0), 900);
+            setTimeout(() => run(0), 400);
         })();
 
         /* ======= NAVBAR HIDE/SHOW + BACK TO TOP ======= */
